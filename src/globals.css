@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  @apply scroll-smooth p-0 m-0 font-[Montserrat];
+}
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+.App {
+  @apply bg-slate-200 flex flex-col gap-5 pt-12 min-h-[100vh] px-2;
+}
+
+.Logo {
+  @apply filter w-[7rem] h-[1rem] drop-shadow-lg;
+}
+.icon {
+  @apply text-3xl hover:text-black cursor-pointer hover:scale-105 w-fit h-fit p-1 hover:bg-zinc-300 rounded-md;
+}
+
+.loading {
+  @apply shadow-md shadow-black;
+  cursor: pointer;
+  animation-name: loading;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+
+@keyframes loading {
+  0% {
+    background-color: #dfdff4;
+  }
+  100% {
+    background-color: #becaca;
+  }
+}
+.dots {
+  @apply absolute bottom-2 left-0 w-full flex items-center justify-center gap-2;
+}
+
+.dot {
+  @apply w-2 h-2 rounded-full bg-slate-50 shadow-md shadow-black cursor-pointer;
+}
+.back_btn {
+  @apply flex items-center justify-start text-lg md:text-xl  mx-2 my-1 z-40 top-1 left-1 cursor-pointer whitespace-nowrap overflow-hidden;
+}
+
+.description_name {
+  width: 90%;
+  overflow: hidden;
+}
+.description_name > div {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.Categories {
+  @apply flex fixed z-10 top-14 left-0 items-start overflow-x-scroll gap-10 justify-between py-1 mt-2 px-3;
+}
+
+.pages {
+  @apply flex items-center mx-auto bg-slate-200 justify-center gap-3 my-5;
+}
+
+.pageNo {
+  @apply p-2 text-xl  font-bold bg-gray-300 rounded-full h-10 w-10 flex items-center justify-center cursor-pointer hover:bg-gray-500 text-zinc-700 hover:text-zinc-200;
+}
+
+hr {
+  @apply bg-zinc-800 my-10 h-[5px];
+}
+.heading_1 {
+  @apply text-2xl flex items-center gap-2 font-semibold;
+}
+.heading_2 {
+  @apply text-lg flex items-center gap-2 font-extralight mb-2;
+}
+
+.loading_ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-spinner {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.skip_icon {
+  @apply absolute py-[auto] mx-2 rounded-full p-1 text-3xl h-[80%] top-[10%] hover:bg-blue-100 hover:scale-110 text-white cursor-pointer;
+}

@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.brands {
+  @apply flex items-start overflow-x-scroll gap-2 py-1 px-2 mt-2;
+}
+.brand {
+  @apply object-contain rounded-full shadow-md shadow-black min-w-[8rem] h-32;
+}

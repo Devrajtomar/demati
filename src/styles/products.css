@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.products {
+  @apply relative flex flex-wrap items-center justify-center  p-2;
+}
+
+.product {
+  @apply relative shadow-md shadow-black w-[280px] h-[260px] sm:w-[240px] overflow-hidden rounded-md box-border p-1 m-2;
+}
+.product_image {
+  @apply w-full h-[150px] object-contain overflow-hidden  flex items-center bg-blend-color-burn justify-center border border-white rounded-md;
+}
+.discount {
+  @apply bg-zinc-800 px-2 py-0.5  rounded-md bg-opacity-50 text-base flex justify-center items-center;
+}
+.rating {
+  @apply flex justify-center items-center gap-1;
+}
+.top {
+  @apply absolute top-2  left-0 justify-between p-2 text-white px-2 py-0.5  rounded-md w-full bg-opacity-50 text-base flex  items-center;
+}
+.product_description {
+  @apply flex flex-col justify-start items-start px-2;
+}
+.product_description > div {
+  @apply flex text-lg font-semibold items-center;
+}
+.description_name {
+  @apply text-ellipsis w-[90%] whitespace-nowrap;
+}
+.page_skip_icon {
+  @apply py-[auto] mx-2 rounded-full p-2 text-3xl bg-gray-400 hover:bg-gray-600 hover:scale-110 text-white cursor-pointer;
+}
+.description_price {
+  @apply flex items-end justify-center gap-2;
+}
+
+.description_price > .original {
+  @apply text-zinc-700 line-through font-medium flex items-center justify-start relative;
+}
+.description_price > .afterDiscount {
+  @apply text-zinc-800 flex items-center font-medium justify-start;
+}
+.btn {
+  @apply bg-white w-full py-2 text-lg font-semibold text-black rounded-full hover:bg-black hover:text-white hover:scale-95 px-5 flex items-center justify-center;
+}
+
+.icons {
+  @apply flex  items-center gap-2 justify-center;
+}
+
+.description_Offer {
+  animation-name: drop;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+
+  @apply bg-green-400 text-white skew-x-3 absolute top-1 left-1 p-2 rounded-lg;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-1000px);
+  }
+  25% {
+    transform: translateY(1000px);
+  }
+  50% {
+    transform: translateY(-1000px);
+  }
+  100% {
+    transform: translateY(1000px);
+  }
+}

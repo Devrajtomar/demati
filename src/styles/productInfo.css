@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ProductInfo {
+  @apply flex flex-col md:flex-row gap-5 p-2 items-start justify-center;
+}
+
+.img {
+  @apply rounded-sm w-[90vw] md:w-[600px] h-[75vw] md:h-[500px] relative object-cover;
+}
+
+.Details {
+  @apply w-full text-3xl flex flex-col gap-0 font-semibold text-zinc-700;
+}
+
+.Detail_Name {
+  @apply text-black font-bold p-1;
+}
+
+.description {
+  @apply text-lg font-light text-zinc-800;
+}
+.price {
+  @apply text-lg py-1 flex items-center justify-start gap-1;
+}
+.price div {
+  @apply flex justify-center items-center gap-0.5;
+}
+.rating {
+  @apply text-lg flex items-start justify-start font-medium;
+}

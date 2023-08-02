@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.footer {
+  @apply bg-zinc-600 bg-opacity-60 text-lg text-white font-semibold w-full flex flex-col gap-2 justify-start items-start pt-2 mb-2 px-2;
+}
+
+.footer_bottom {
+  @apply flex flex-col justify-center items-center gap-2 w-full;
+}
+
+.footer_copyright {
+  letter-spacing: 2px;
+}
+
+.footer_Links {
+  @apply flex gap-5 w-full flex-wrap justify-around items-start my-3 mt-4;
+}
+
+.footer_contactForm {
+  @apply flex flex-col gap-3 items-center justify-center w-full border border-gray-500 px-2 sm:px-9 text-black md:px-14 lg:px-28  py-5 my-5;
+}
+.footer_contactForm input {
+  @apply flex-1  w-full max-w-[700px] outline-none   rounded-md px-2 py-1;
+}
+.footer_contactForm button {
+  @apply flex-1 rounded-md bg-blue-300 hover:bg-blue-400 w-full max-w-[700px] text-lg px-2 py-1;
+}
