@@ -2,6 +2,8 @@ import { Footer, Product } from "../components";
 import "../styles/cart.css";
 import { data } from "../states/states";
 const Cart = () => {
+  const cart = window.localStorage.getItem("cart");
+  const cartItems = cart === "" ? [] : JSON.parse(cart);
   return (
     <div className="Cart">
       <h1 className="heading_1">Your Cart</h1>
@@ -11,7 +13,7 @@ const Cart = () => {
             No items in Your Cart.
           </h1>
         ) : (
-          data.cartItems.map((product) => {
+          cartItems.map((product) => {
             console.log(product);
             return <Product key={product.id} product={product} />;
           })

@@ -11,7 +11,12 @@ import { useSnapshot } from "valtio";
 import { data } from "../states/states";
 
 const Product = ({ product }) => {
-  const state = useSnapshot(data);
+  const cart = window.localStorage.getItem("cart");
+  const oldcart = cart === "" ? [] : JSON.parse(cart);
+  const wishlist = window.localStorage.getItem("wishlist");
+  const oldwishlist = wishlist === "" ? [] : JSON.parse(wishlist);
+
+  useSnapshot(data);
   const product_ = product;
   const name = product.title;
   const ID = product.id;
@@ -21,23 +26,47 @@ const Product = ({ product }) => {
   const brand = product.brand;
   const price = product.price;
   const sellPrice = price - price * (discount / 100);
+  const AddCart = (productData) => {
+    const newcart = [...oldcart, productData];
+    console.log(newcart);
 
-  const AddCart = (productData) => data.cartItems.push(productData);
-  const AddWishlist = (productData) => data.wishlistItems.push(productData);
+    data.cartItems.push(productData);
+    window.localStorage.setItem("cart", JSON.stringify(newcart));
+  };
+  const AddWishlist = (productData) => {
+    const newwishlist = [...oldwishlist, productData];
+    console.log(newwishlist);
+
+    data.wishlistItems.push(productData);
+    window.localStorage.setItem("wishlist", JSON.stringify(newwishlist));
+  };
 
   const RemoveCart = (id) => {
+    console.log(cart);
     const indexToDelete = data.cartItems.findIndex((obj) => obj.id === id);
     data.cartItems.splice(indexToDelete, 1);
+
+    const index = oldcart.findIndex((obj) => obj.id === id);
+    oldcart.splice(index, 1);
+
+    window.localStorage.setItem("cart", JSON.stringify(oldcart));
   };
   const RemoveWishlist = (id) => {
+    console.log(wishlist);
     const indexToDelete = data.wishlistItems.findIndex((obj) => obj.id === id);
     data.wishlistItems.splice(indexToDelete, 1);
+
+    const index = oldwishlist.findIndex((obj) => obj.id === id);
+    oldwishlist.splice(index, 1);
+
+    window.localStorage.setItem("wishlist", JSON.stringify(oldwishlist));
   };
 
   const matchCart = data.cartItems.find(
     (product) => product.id === product_.id,
   );
-  const matchWishlist = data.wishlistItems.find(
+
+  const matchWishlist = oldwishlist.find(
     (product) => product.id === product_.id,
   );
 

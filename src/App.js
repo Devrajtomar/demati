@@ -12,10 +12,18 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import FetchData from "./states/FetchData";
 import { Navbar } from "./components";
 const App = () => {
+  const cart = window.localStorage.getItem("cart");
+  const wishlist = window.localStorage.getItem("wishlist");
+  if (!cart) {
+    window.localStorage.setItem("cart", "");
+  }
+
+  if (!wishlist) {
+    window.localStorage.setItem("wishlist", "");
+  }
   useSnapshot(navbar);
 
   FetchData();
-  console.log(data);
 
   if (data.products.length === 0 || data.categories.length === 0) {
     return (
