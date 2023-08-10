@@ -3,7 +3,9 @@ import "../styles/cart.css";
 import { data } from "../states/states";
 const Wishlist = () => {
   const wishlist = window.localStorage.getItem("wishlist");
-  const wishlistItems = wishlist === "" ? [] : JSON.parse(wishlist);
+  console.log(wishlist);
+  const wishlistItems = JSON.parse(wishlist);
+  console.log(wishlistItems);
   return (
     <div className="Cart">
       <h1 className="heading_1">Your Wishlist</h1>

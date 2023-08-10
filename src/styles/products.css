@@ -7,7 +7,7 @@
 }
 
 .product {
-  @apply relative shadow-md shadow-black w-[280px] h-[260px] sm:w-[240px] overflow-hidden rounded-md box-border p-1 m-2;
+  @apply relative  w-[280px] h-[260px] sm:w-[240px] overflow-hidden rounded-md box-border p-1 m-2;
 }
 .product_image {
   @apply w-full h-[150px] object-contain overflow-hidden  flex items-center bg-blend-color-burn justify-center border border-white rounded-md;

@@ -13,7 +13,7 @@ const Categories = ({ containerStyle }) => {
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
           <div
             key={i}
-            className="loading min-w-[200px] rounded-md max-w-full shadow-md shadow-black h-8"
+            className="loading min-w-[200px] rounded-md max-w-full  h-8"
           />
         ))}
       </div>

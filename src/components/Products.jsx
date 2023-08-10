@@ -10,7 +10,7 @@ const Products = ({ num }) => {
       <div className="products">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
           <div key={i}>
-            <div className="loading min-w-[300px] min-h-[300px] rounded-md shadow-md shadow-black" />
+            <div className="loading min-w-[300px] min-h-[300px] rounded-md " />
           </div>
         ))}
       </div>

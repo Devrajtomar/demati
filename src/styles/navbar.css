@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 .navbar {
-  @apply fixed top-2 left-0 flex justify-between items-center shadow-md shadow-black bg-opacity-80 pb-2 gap-5 z-20  py-1 text-xl bg-slate-200  text-zinc-700 px-5 w-full rounded-sm;
+  @apply fixed top-2 left-0 flex justify-between items-center  bg-opacity-80 pb-2 gap-5 z-20  py-1 text-xl bg-slate-200  text-zinc-700 px-5 w-full rounded-sm;
 }
 
 .sidebar {
-  @apply bg-slate-300 py-1 z-30 fixed top-2 right-2 flex flex-col min-w-[300px] sm:max-w-[500] px-4  h-[100vh] shadow-md shadow-black overflow-scroll;
+  @apply bg-slate-300 py-1 z-30 fixed top-2 right-2 flex flex-col min-w-[300px] sm:max-w-[500] px-4  h-[100vh]  overflow-scroll;
 }
 .searchbar {
-  @apply sm:flex relative shadow-md shadow-black items-center py-[2px] rounded-md bg-white hidden;
+  @apply sm:flex relative  items-center py-[2px] rounded-md bg-white hidden;
 }
 .searchbar_input {
   @apply w-full py-1 max-w-[400px] px-2 outline-none font-normal rounded-md bg-white;
@@ -25,7 +25,7 @@
 }
 
 .menu_item {
-  @apply flex items-center w-full gap-1 px-2 py-1 rounded-lg my-[5px] cursor-pointer hover:bg-white hover:text-black shadow-md shadow-black;
+  @apply flex items-center w-full gap-1 px-2 py-1 rounded-lg my-[5px] cursor-pointer hover:bg-white hover:text-black;
 }
 
 .selectedCategory {

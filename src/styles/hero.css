@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .Hero {
-  @apply w-full h-[50vw] box-border shadow-md shadow-black rounded-md overflow-hidden relative;
+  @apply w-full h-[50vw] box-border  rounded-md overflow-hidden relative;
 }
 
 .hero_image_container {

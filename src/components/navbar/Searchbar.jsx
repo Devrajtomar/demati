@@ -55,7 +55,7 @@ const Searchbar = () => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Combobox.Options className="absolute top-[100%] left-0 mt-1 max-h-52 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+          <Combobox.Options className="absolute top-[100%] left-0 mt-1 max-h-52 w-full overflow-auto rounded-md bg-white py-1 text-base ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
             {filteredOptions.length === 0 && query !== "" ? (
               <div className=" cursor-default select-none py-2 px-4 text-gray-700">
                 Nothing found.
