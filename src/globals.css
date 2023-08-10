@@ -21,7 +21,6 @@
 }
 
 .loading {
-  @apply;
   cursor: pointer;
   animation-name: loading;
   animation-duration: 1s;
