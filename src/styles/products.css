@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .products {
-  @apply relative flex flex-wrap items-center justify-center  p-2;
+  @apply relative flex flex-wrap items-center justify-center gap-2 p-2;
 }
 
 .product {

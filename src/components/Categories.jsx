@@ -23,11 +23,11 @@ const Categories = ({ containerStyle }) => {
     <div className={`${containerStyle}`}>
       <div
         className={`menu_item justify-between ${
-          navbar.selectedCategory === "All" && "selectedCategory"
+          navbar.selectedCategory === "All" ? "selectedCategory" : ""
         }`}
         onClick={() => {
           setCategory("All");
-          setSidebar();
+          setSidebar(false);
         }}
       >
         <pre>All</pre>

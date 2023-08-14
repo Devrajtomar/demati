@@ -25,13 +25,13 @@ const App = () => {
 
   FetchData();
 
-  if (data.products.length === 0 || data.categories.length === 0) {
-    return (
-      <div className="loading_">
-        <div className="loading-spinner"></div>
-      </div>
-    );
-  }
+  //if (data.products.length === 0 || data.categories.length === 0) {
+  //  return (
+  //    <div className="loading_">
+  //      <div className="loading-spinner"></div>
+  //    </div>
+  //  );
+  //}
   return (
     <div className="App">
       {navbar.selectedTab !== "Home" &&

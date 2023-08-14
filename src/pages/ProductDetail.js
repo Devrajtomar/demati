@@ -117,6 +117,17 @@ const ProductDetail = () => {
               {brand}
             </a>
           </div>
+          <div className="flex justify-start items-center gap-3 mt-5">
+            <div className="bg-gray-300 hover:bg-gray-400 rounded-lg p-2 text-lg cursor-pointer">
+              Add to cart
+            </div>
+            <div className="bg-gray-300 hover:bg-gray-400 rounded-lg p-2 text-lg cursor-pointer">
+              Add to wishlist
+            </div>
+            <div className="bg-gray-300 hover:bg-gray-400 rounded-lg p-2 text-lg cursor-pointer">
+              Buy now
+            </div>
+          </div>
         </div>
       </div>
       {/* {variants.length != 0 && (

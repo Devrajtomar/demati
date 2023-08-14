@@ -12,7 +12,7 @@ const Navbar = () => {
       </div>
       <div className="Categories">
         {navbar.selectedTab === "Home" && (
-          <Categories containerStyle="flex py-1 text-lg overflow-x-scroll gap-2" />
+          <Categories containerStyle="flex justify-start items-center text-lg overflow-x-scroll gap-2" />
         )}
       </div>
     </div>

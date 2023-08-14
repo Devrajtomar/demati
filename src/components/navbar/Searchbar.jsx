@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { AiOutlineClose } from "react-icons/ai";
 import { data, navbar } from "../../states/states";
@@ -28,6 +28,7 @@ const Searchbar = () => {
   for (let i = 0; i < data.categories.length; i++) {
     Options.push(data.categories[i]);
   }
+  console.log(Options);
   const filteredOptions =
     query === ""
       ? []
@@ -69,7 +70,10 @@ const Searchbar = () => {
                         active ? "bg-teal-600 text-white" : "text-gray-900"
                       }`
                     }
-                    onClick={(() => setQuery(value), handelSearch)}
+                    onClick={() => {
+                      setQuery(value);
+                      handelSearch();
+                    }}
                     value={value}
                   >
                     {value}
@@ -80,7 +84,7 @@ const Searchbar = () => {
           </Combobox.Options>
         </Transition>
         {navbar.selectedTab === "SearchResults" && (
-          <div type="submit" onClick={deleteSearch} className="search_icon">
+          <div onClick={deleteSearch} className="search_icon">
             <AiOutlineClose size={24} />
           </div>
         )}

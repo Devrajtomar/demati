@@ -5,7 +5,7 @@ import { useSnapshot } from "valtio";
 import { navbar } from "../states/states";
 
 const Category = ({ defaultvalue, options }) => {
-  const state = useSnapshot(navbar);
+  useSnapshot(navbar);
   const selectedCategory = navbar.selectedCategory;
   const setCategory = (name) => (navbar.selectedCategory = name);
   const setSidebar = () => (navbar.isOpen = false);
