@@ -1,4 +1,8 @@
 import { proxy } from "valtio";
+
+const cart = window.localStorage.getItem("cart");
+const cartItems = cart === "" ? [] : JSON.parse(cart);
+
 export const navbar = proxy({
   isOpen: false,
   selectedTab: "Home",
@@ -12,7 +16,7 @@ export const data = proxy({
   products: [],
   brands: [],
   categories: [],
-  cartItems: [],
+  cartItems: cartItems,
   wishlistItems: [],
   footerLinks: [],
 });

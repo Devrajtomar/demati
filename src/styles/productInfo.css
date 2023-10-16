@@ -11,22 +11,30 @@
 }
 
 .Details {
-  @apply w-full text-3xl flex flex-col gap-0 font-semibold text-zinc-700;
+  @apply w-full text-3xl flex flex-col gap-0 font-semibold text-zinc-700 py-4;
 }
 
 .Detail_Name {
-  @apply text-black font-bold p-1;
+  color: #444;
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0 0 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  @apply text-black  p-1 font-["Montserrat",sans-serif];
 }
 
 .description {
   @apply text-lg font-light text-zinc-800;
 }
 .price {
-  @apply text-lg py-1 flex items-center justify-start gap-1;
+  line-height: normal;
+  @apply text-3xl py-1 flex items-center justify-start gap-1 text-[#f55];
 }
 .price div {
   @apply flex justify-center items-center gap-0.5;
 }
 .rating {
-  @apply text-lg flex items-start justify-start font-medium;
+  @apply text-lg flex items-start justify-start font-medium text-[#f4ca39f0];
 }

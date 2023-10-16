@@ -13,7 +13,7 @@ const Hero = () => {
         <img
           src={`/slider_${i}.webp`}
           alt={topOffers[i].heading}
-          className="w-full h-full object-fill"
+          className="w-full h-full object-cover"
         />
 
         <div className="hero_details">

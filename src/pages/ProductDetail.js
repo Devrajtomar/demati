@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import {
+  AiFillHeart,
   AiFillStar,
   AiOutlineArrowLeft,
   AiOutlineArrowRight,
@@ -58,16 +59,21 @@ const ProductDetail = () => {
       </a>
       <div className="ProductInfo">
         <div className="img">
+          <div className="bg-gray-300 hover:bg-gray-400 rounded-lg p-2 text-lg cursor-pointer">
+            <AiFillHeart size={40} />
+          </div>
           <img
             src={imgUrl}
             className=" rounded-lg w-full h-full object-cover"
           />
           <AiOutlineArrowLeft
             className="skip_icon left-0"
+            size={35}
             onClick={() => productInfo.PrevImg(ImgCount)}
           />
           <AiOutlineArrowRight
             className="skip_icon right-0"
+            size={35}
             onClick={() => productInfo.NextImg(ImgCount)}
           />
           <div className="dots">
@@ -86,7 +92,7 @@ const ProductDetail = () => {
           </div>
           <div className="heading_2">{category}</div>
           <div className="price">
-            <div className="relative">
+            <div className="relative text-zinc-800">
               <BiDollar size={20} />
               {price}
               <div className="absolute h-0.5 w-full bg-black" />
@@ -120,9 +126,6 @@ const ProductDetail = () => {
           <div className="flex justify-start items-center gap-3 mt-5">
             <div className="bg-gray-300 hover:bg-gray-400 rounded-lg p-2 text-lg cursor-pointer">
               Add to cart
-            </div>
-            <div className="bg-gray-300 hover:bg-gray-400 rounded-lg p-2 text-lg cursor-pointer">
-              Add to wishlist
             </div>
             <div className="bg-gray-300 hover:bg-gray-400 rounded-lg p-2 text-lg cursor-pointer">
               Buy now

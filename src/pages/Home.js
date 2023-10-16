@@ -5,7 +5,7 @@ const Home = () => {
     <div>
       <Navbar />
 
-      <div className="App">
+      <div>
         <Hero />
         <Brands />
         <h1 className="heading_1">Top Products For You</h1>

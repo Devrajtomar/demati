@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   line-height: 1;
 
-  @apply scroll-smooth p-0 m-0 font-[Montserrat];
+  @apply scroll-smooth p-0 m-0;
 }
 *::-webkit-scrollbar {
   @apply hidden;
@@ -59,7 +60,7 @@
 }
 
 .Categories {
-  @apply flex fixed z-10 top-14 left-0 items-start overflow-x-scroll gap-10 justify-start mt-2 py-0 px-3 bg-gray-50 bg-opacity-95 w-screen;
+  @apply flex fixed z-10 top-14 left-0 items-start overflow-x-scroll gap-10 justify-start mt-2 py-0 md:px-2 lg:px-3 xl:px-5 2xl:px-8 bg-gray-50 bg-opacity-95 w-screen;
 }
 
 .pages {
@@ -106,5 +107,5 @@ hr {
 }
 
 .skip_icon {
-  @apply absolute py-[auto] mx-2 rounded-full p-1 text-3xl h-[80%] top-[10%] hover:bg-blue-100 hover:scale-110 text-white cursor-pointer;
+  @apply absolute p-2 mx-2 rounded-full  text-3xl h-fit top-[50%] bg-zinc-300 hover:bg-zinc-200 hover:scale-110 text-black cursor-pointer;
 }
